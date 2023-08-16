@@ -5,8 +5,8 @@ const Counter = () => {
     const [increment, setIncrement] = useState(0);
 
     useEffect(() => {
-        console.log(value,increment);
-    });
+        setIncrement(Number(increment));
+    },[increment]);
 
     const onChangeIncrement = e => {
         setIncrement(e.target.value);
@@ -17,8 +17,8 @@ const Counter = () => {
             현재 카운터 값은 <b>{value}</b> 입니다.
         </p>
         <input value={increment} onChange={onChangeIncrement}></input>
-        <button onClick={() => setValue(Number(value) + Number(increment))}>+{increment}</button>
-        <button onClick={() => setValue(Number(value) - Number(increment))}>-{increment}</button>
+        <button onClick={() => setValue(value + increment)}>+{increment}</button>
+        <button onClick={() => setValue(value - increment)}>-{increment}</button>
     </div>);
 };
 
