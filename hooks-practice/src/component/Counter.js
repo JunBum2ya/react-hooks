@@ -1,8 +1,12 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 
 const Counter = () => {
     const [value, setValue] = useState(0);
     const [increment, setIncrement] = useState(0);
+
+    useEffect(() => {
+        console.log(value,increment);
+    });
 
     const onChangeIncrement = e => {
         setIncrement(e.target.value);
