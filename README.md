@@ -8,4 +8,4 @@ hooks의 이해
     3. useMemo : 랜더링 되는 경우를 지정할 때 사용한다.
     4. useCallback : 함수를 매번 생성하는 것을 방지
     5. useRef : dom에 직접 접근
-    6. useContext: context에 접근한다
+    6. useContext: context에 접근한다 redux
